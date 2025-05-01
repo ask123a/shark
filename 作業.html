@@ -6,131 +6,206 @@
     <title>影響我最深的一句話</title>
     <style>
         body {
-            font-family: 'Microsoft JhengHei', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
+            font-family: "DFKai-SB", "標楷體", Kaiu, BiauKai, serif;
+            line-height: 1.8;
+            max-width: 1200px; 
             margin: 0 auto;
             padding: 20px;
             color: #333;
             background-color: #f9f9f9;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+            font-size: 18px;
+            overflow: hidden; 
         }
         
-        h1 {
-            color: #2c3e50;
+        .header {
             text-align: center;
-            border-bottom: 2px solid #f70606;
-            padding-bottom: 10px;
-            text-decoration: underline wavy #0e324b; 
+            margin-bottom: 30px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #e8f4fc, #f0f8ff);
+            border-radius: 8px;
+            border: 1px solid #3498db;
         }
         
-        h2 {
-            color: #260661;
-            margin-top: 30px;
+        .site-title {
+            font-size: 42px;
+            color: #2c3e50;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
         
-        h3 {
-            margin: 10px 0;
-            font-size: 20px;
+        .slogan {
+            font-size: 24px;
+            color: #e74c3c;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+            font-style: italic;
+            text-decoration: underline wavy #3498db;
         }
         
-        .a { text-emphasis: filled circle rgba(175, 6, 6, 0.719); }
-        .b {
-            text-emphasis-style: filled;
-            text-emphasis-color: rgba(90, 6, 6, 0.699);
+        .main-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
         }
-        .c { text-emphasis: open circle orange; }
-        .d { text-emphasis: triangle #909; }
-        .e { 
-            text-emphasis: "huh" #432dc2;
-            text-emphasis-position: under;
+        
+        .left-section {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .profile-photo {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        
+        .right-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .two-columns {
+            columns: 2;
+            column-gap: 40px;
+            column-rule: 1px solid #ddd;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            margin: 20px 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .title1 {
+            font-family: "Microsoft JhengHei", sans-serif;
+            background: linear-gradient(to right, #050aff, #9b59b6);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            border-left: 5px solid #e74c3c;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        
+        .title2 {
+            font-family: "Arial Black", Gadget, sans-serif;
+            background-color: #f1c40f;
+            color: #2c3e50;
+            text-decoration: underline double #e74c3c;
+            transform: rotate(-2deg);
+            display: inline-block;
+            padding: 10px 25px;
+        }
+        
+        .title3 {
+            font-family: "Times New Roman", serif;
+            background-color: #e74c3c;
+            color: white;
+            border: 2px dashed white;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .decoration-examples {
-            background: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .content-block {
+            margin-bottom: 30px;
+            break-inside: avoid; 
         }
-        
-        .underline { text-decoration-line: underline; }
-        .overline { text-decoration-line: overline; }
-        .line-through { text-decoration-line: line-through; }
-        
-        .solid { text-decoration-style: solid; }
-        .double { text-decoration-style: double; }
-        .dotted { text-decoration-style: dotted; }
-        .dashed { text-decoration-style: dashed; }
-        .wavy { text-decoration-style: wavy; }
         
         .quote {
             background-color: #e8f4fc;
-            padding: 15px;
-            border-left: 4px solid #3205fa;
+            padding: 20px;
+            border-left: 4px solid #2a08ee;
             margin: 15px 0;
-            border-radius: 0 5px 5px 0;
+            border-radius: 0 8px 8px 0;
         }
         
         .song-lyrics {
             font-style: italic;
             color: #555;
-            line-height: 1.8;
-            background: #fff;
-            padding: 15px;
-            border-radius: 5px;
+            line-height: 2.0;
+            padding: 10px 0;
         }
         
-        .highlight {
-            font-weight: bold;
-            color: #160652;
-        }
-        
-        ol {
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 10px;
+        @media (max-width: 900px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .two-columns {
+                columns: 1;
+            }
+            
+            .profile-photo {
+                max-width: 250px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>影響我最深的一句話</h1>
+
+    <div class="header">
+        <div class="site-title">影響我最深的一句話</div>
+        <div class="slogan">活著只是迎向死亡的過程</div>
+    </div>
     
-    <section>
-        <h3 class="a">那些能帶給我快樂的事情</h3>
-        <div class="quote">
-            <p>在生活的旅途中，簡短而有力的動態與自覺的感覺為我們所行的動力。能夠激發我們內心的潛能，增強自信，帶來積極的心理暗示。</p>
+
+    <div class="main-container">
+
+        <div class="left-section">
+            <img src="AAAAAAAAAAAAAA.jpg" alt="我的照片" class="profile-photo">
+            <h3 class="section-title title3">陳宥丞</h3>
         </div>
-    </section>
-    
-    <section>
-        <h3 class="b">我最喜歡的文字</h3>
-        <ol>
-            <li class="underline wavy">人生就像滑直排輪，要保持平衡，就一直向前。</li>
-            <li class="overline dashed">我們應該有決心，尤其要有信心。</li>
-            <li class="line-through dotted">行動是成功的基礎，沒有踏出第一步，一切都是空談。</li>
-        </ol>
-    </section>
-    
-    <section>
-        <h3 class="d">我最喜歡的一首歌—<span class="highlight">一首歌</span></h3>
-        <div class="song-lyrics">
-            <p>能不能給我一首歌的時間</p>
-            <p>讓你徹底愛上我 不管心多遙遠</p>
-            <p>溫暖你每個冬天 永遠不止能夢見</p>
-            <p>Yeah, baby give me a chance</p><br>
-            <p>Yeah, babe 拜託別攔我 huh</p>
-            <p>一首歌時間就會讓你半夜也想我 huh</p>
-            <p class="e">像小龍女與楊過 huh</p>
-            <p>是武俠不是言情小說 huh</p>
-            <p>每個眼神喘息不可能在我眼皮下逃過</p>
-            <p>不真心 不會跟你攪和</p><br>
-            <p>請你把握 跟著直覺 還有時間陪你環遊世界</p>
-            <p>像個 rockstar 但是從不法大 只狂歡在有你的日夜</p>
-            <p>我是尼莫 你深似海對我放浪 我要住在裡頭</p>
-            <p>And you need more 高潮迭起能填補你的寂寞 you know</p>
+        
+
+        <div class="right-section">
+ 
+            <div class="two-columns">
+
+                <h3 class="section-title title1">那些能帶給我快樂的事情</h3>
+                <div class="content-block">
+                    <div class="quote">
+                        <p>遊戲是我最喜歡的事之一，我可以從過程中享受</p>
+                    </div>
+                </div>
+                
+                <h3 class="section-title title2">我最喜歡有意義的話</h3>
+                <div class="content-block">
+                    <ul>
+                        <li>吾心吾形成如明鏡，所作所為皆為正義</li>
+                        <li>覺悟就是在一片漆黑，開闢一條自己的光明大道</li>
+                        <li>我的捷徑就是繞遠路</li>
+                    </ul>
+                </div>
+                
+                <h3 class="section-title title1">我最喜歡的歌</h3>
+                <div class="content-block">
+                    <div class="song-lyrics">
+                        <a href="https://youtu.be/wDgQdr8ZkTw">歌</a>
+                        <p>沒有歌詞</p>
+                    <p src="AAAAAAAAAAAAAA.jpg"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
